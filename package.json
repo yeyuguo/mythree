@@ -1,0 +1,22 @@
+{
+  "name": "my_threejs",
+  "version": "1.0.0",
+  "description": "this is my example to do threejs",
+  "main": "three.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeyuguo/mythree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeyuguo/mythree/issues"
+  },
+  "homepage": "https://github.com/yeyuguo/mythree",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
