@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <title>Move</title>
     <script src="js/three.js"></script>
+    <!--监测js-->
+    <script type="text/javascript" src="js/stats.js"></script>
+    <!--动画引擎-->
+    <script type="text/javascript" src="js/tween.js" data-ke-src="js/tween.min.js"></script>
+
     <style type="text/css">
         div#canvas-frame {
             border: none;
@@ -32,6 +37,14 @@
             renderer.setSize(width, height);
             document.getElementById('canvas-frame').appendChild(renderer.domElement);
             renderer.setClearColor(0xFFFFFF, 1.0);
+
+            /*
+            * 监视器*/
+//            var stats = new Stats();
+//            stats.domElement.style.position = 'absolute';
+//            stats.domElement.style.left = '0px';
+//            stats.domElement.style.top = '0px';
+//            document.getElementById('canvas-frame').appendChild(stats.domElement);
         }
 
         var camera;
@@ -98,6 +111,31 @@
             mesh.position.x-=1;
             renderer.render(scene, camera);
             requestAnimationFrame(animation);
+
+
+//            stats.update();
+        }
+
+
+
+        /*=====监视器=========*/
+        /*
+        * URL:http://www.hewebgl.com/article/getarticle/58
+        * */
+
+        function stat(){
+            var stats = new Stats();
+            stats.setMode(1); // 0: fps, 1: ms
+            // 将stats的界面对应左上角
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.getElementById('canvas-frame').appendChild( stats.domElement );
+            setInterval( function () {
+                stats.begin();
+                // 你的每一帧的代码
+                stats.end();
+            }, 1000 / 60 );
         }
 
     </script>
