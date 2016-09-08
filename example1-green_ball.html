@@ -36,7 +36,8 @@
          * 代码中出现了THREE.CubeGeometry，THREE.CubeGeometry是什么东东，他是一个几何体，几何体由什么组成，已经不是本课的主要内容了，后面的课程我们会详细的学到。不过这里你只需要知道CubeGeometry是一个正方体或者长方体，究竟是什么，由它的3个参数所决定，cubeGeometry的原型如下代码所示：*/
         var geometry = new THREE.CubeGeometry(1,1,1);
         var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-        var cube = new THREE.Mesh(geometry, material); scene.add(cube);
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
         camera.position.z = 5;
 
         /*渲染循环*/

@@ -72,6 +72,9 @@
             var color1 = new THREE.Color( 0x444444 ), color2 = new THREE.Color( 0xFF0000 );
 
             // 线的材质可以由2点的颜色决定
+            /*
+            * THREE.Vector3被赋值为一个函数。这个函数有3个参数，分别代表x坐标，y坐标和z坐标的分量。函数体内的代码将他们分别赋值给成员变量x，y，z
+            * */
             var p1 = new THREE.Vector3( -100, 0, 100 );
             var p2 = new THREE.Vector3(  100, 0, -100 );
             geometry.vertices.push(p1);
@@ -85,6 +88,7 @@
         {
             renderer.clear();
             renderer.render(scene, camera);
+            // todo:为了实现循环，我们需要javascript的一个特殊函数，这个函数是requestAnimationFrame。
             requestAnimationFrame(render);
         }
         function threeStart() {
